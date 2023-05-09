@@ -1,12 +1,8 @@
-import React from "react";
+import React, { ComponentPropsWithRef } from "react";
 
-type Props = {
-  state: string;
-  handleInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type: React.HTMLInputTypeAttribute;
-};
+type Props = ComponentPropsWithRef<"input">;
 
 export const Input = (props: Props) => {
-  const { state, handleInput, type } = props;
-  return <input value={state} onChange={handleInput} type={type} />;
+  const { style } = props;
+  return <input {...props} style={{ borderRadius: "5px", ...style }} />;
 };
