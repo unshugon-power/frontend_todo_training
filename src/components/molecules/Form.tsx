@@ -54,11 +54,11 @@ export const Form = (props: Props) => {
     >
       <label>
         タスク名:
-        <Input type="text" state={state} handleInput={handleInput} />
+        <Input type="text" value={state} onChange={handleInput} />
       </label>
       <label>
         期日:
-        <Input type="date" state={dateState} handleInput={handleDateInput} />
+        <Input type="date" value={dateState} onChange={handleDateInput} />
       </label>
       <button type="submit">追加</button>
     </form>
